@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		0ED2327A258AADCF00364DCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED23278258AADCF00364DCB /* LaunchScreen.storyboard */; };
 		0ED23285258AADCF00364DCB /* SuzuriSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED23284258AADCF00364DCB /* SuzuriSampleTests.swift */; };
 		0ED23290258AADCF00364DCB /* SuzuriSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2328F258AADCF00364DCB /* SuzuriSampleUITests.swift */; };
+		0ED232A2258AAE8000364DCB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED232A1258AAE8000364DCB /* Alamofire */; };
+		0ED232A8258ACA8C00364DCB /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED232A7258ACA8C00364DCB /* OAuthSwift */; };
+		0ED232AD258ACAB400364DCB /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232AC258ACAB400364DCB /* WebVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		0ED2328B258AADCF00364DCB /* SuzuriSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuzuriSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED2328F258AADCF00364DCB /* SuzuriSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuzuriSampleUITests.swift; sourceTree = "<group>"; };
 		0ED23291258AADCF00364DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ED232AC258ACAB400364DCB /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED232A8258ACA8C00364DCB /* OAuthSwift in Frameworks */,
+				0ED232A2258AAE8000364DCB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 				0ED23276258AADCF00364DCB /* Assets.xcassets */,
 				0ED23278258AADCF00364DCB /* LaunchScreen.storyboard */,
 				0ED2327B258AADCF00364DCB /* Info.plist */,
+				0ED232AC258ACAB400364DCB /* WebVC.swift */,
 			);
 			path = SuzuriSample;
 			sourceTree = "<group>";
@@ -144,6 +151,10 @@
 			dependencies = (
 			);
 			name = SuzuriSample;
+			packageProductDependencies = (
+				0ED232A1258AAE8000364DCB /* Alamofire */,
+				0ED232A7258ACA8C00364DCB /* OAuthSwift */,
+			);
 			productName = SuzuriSample;
 			productReference = 0ED2326A258AADCD00364DCB /* SuzuriSample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,10 @@
 				Base,
 			);
 			mainGroup = 0ED23261258AADCD00364DCB;
+			packageReferences = (
+				0ED232A0258AAE8000364DCB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0ED232A6258ACA8C00364DCB /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+			);
 			productRefGroup = 0ED2326B258AADCD00364DCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED23272258AADCD00364DCB /* ViewController.swift in Sources */,
+				0ED232AD258ACAB400364DCB /* WebVC.swift in Sources */,
 				0ED2326E258AADCD00364DCB /* AppDelegate.swift in Sources */,
 				0ED23270258AADCD00364DCB /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +609,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0ED232A0258AAE8000364DCB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		0ED232A6258ACA8C00364DCB /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0ED232A1258AAE8000364DCB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED232A0258AAE8000364DCB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0ED232A7258ACA8C00364DCB /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0ED232A6258ACA8C00364DCB /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0ED23262258AADCD00364DCB /* Project object */;
 }
