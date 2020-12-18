@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     func putOmoide(){
         let apikey = "sya-StGl4wbHoBCMRvp3iBVedVYlS06NZ04B_v5FO9Q"
         let test: HTTPHeaders? = ["Authorization": "Bearer \(apikey)"]
-        let url = "https://suzuri.jp/api/v1/choices "
+        let url = "https://suzuri.jp/api/v1/choices"
         let parameter  = ["title": "do-mo!!!"]
         AF.request(url, method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: test ).responseJSON { response  in
             print("テス")
@@ -65,7 +65,6 @@ class ViewController: UIViewController {
             print("イエー")
 //            print("user: \(String(describing: user))")
         }
-        
     }
     
     

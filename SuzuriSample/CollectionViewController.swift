@@ -7,13 +7,13 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 final class CollectionViewController: UIViewController {
-    //    let collectionView: UICollectionView = .init()
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getProduct()
         let flowLayout = UICollectionViewFlowLayout()
         let margin: CGFloat = 5
         flowLayout.itemSize = CGSize(width: 150, height: 250)
@@ -31,6 +31,22 @@ final class CollectionViewController: UIViewController {
             collectionView.topAnchor.constraint(equalTo: self.view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
+    }
+    func getProduct(){
+        let apikey = "sya-StGl4wbHoBCMRvp3iBVedVYlS06NZ04B_v5FO9Q"
+        let test: HTTPHeaders? = ["Authorization": "Bearer \(apikey)"]
+        let url = "https://suzuri.jp/api/v1/products"
+//        let para = ["limit": "1"]
+        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: test ).responseJSON { response  in
+            print("テス")
+            guard let data = response.data else { return print("return") }
+            print("response: \(response)")
+            print("data: \(data)")
+            print("イエー")
+            let user = try! JSONDecoder().decode(Test.self, from: data)
+//            print("user: \(String(describing: user))")
+            print(user.products.count)
+        }
     }
     
 }
