@@ -18,6 +18,10 @@
 		0ED232A2258AAE8000364DCB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED232A1258AAE8000364DCB /* Alamofire */; };
 		0ED232A8258ACA8C00364DCB /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED232A7258ACA8C00364DCB /* OAuthSwift */; };
 		0ED232AD258ACAB400364DCB /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232AC258ACAB400364DCB /* WebVC.swift */; };
+		0ED232B2258B227300364DCB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232B1258B227300364DCB /* CollectionViewController.swift */; };
+		0ED232B7258B249100364DCB /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232B6258B249100364DCB /* Cell.swift */; };
+		0ED232BE258B6EDB00364DCB /* UIView +swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232BD258B6EDB00364DCB /* UIView +swift.swift */; };
+		0ED232C6258B6F1300364DCB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232C5258B6F1300364DCB /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		0ED2328F258AADCF00364DCB /* SuzuriSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuzuriSampleUITests.swift; sourceTree = "<group>"; };
 		0ED23291258AADCF00364DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED232AC258ACAB400364DCB /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		0ED232B1258B227300364DCB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		0ED232B6258B249100364DCB /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		0ED232BD258B6EDB00364DCB /* UIView +swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +swift.swift"; sourceTree = "<group>"; };
+		0ED232C5258B6F1300364DCB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		0ED2326C258AADCD00364DCB /* SuzuriSample */ = {
 			isa = PBXGroup;
 			children = (
+				0ED232BB258B6E0400364DCB /* Extension */,
 				0ED2326D258AADCD00364DCB /* AppDelegate.swift */,
 				0ED2326F258AADCD00364DCB /* SceneDelegate.swift */,
 				0ED23271258AADCD00364DCB /* ViewController.swift */,
@@ -113,6 +122,8 @@
 				0ED23278258AADCF00364DCB /* LaunchScreen.storyboard */,
 				0ED2327B258AADCF00364DCB /* Info.plist */,
 				0ED232AC258ACAB400364DCB /* WebVC.swift */,
+				0ED232B1258B227300364DCB /* CollectionViewController.swift */,
+				0ED232B6258B249100364DCB /* Cell.swift */,
 			);
 			path = SuzuriSample;
 			sourceTree = "<group>";
@@ -133,6 +144,15 @@
 				0ED23291258AADCF00364DCB /* Info.plist */,
 			);
 			path = SuzuriSampleUITests;
+			sourceTree = "<group>";
+		};
+		0ED232BB258B6E0400364DCB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0ED232BD258B6EDB00364DCB /* UIView +swift.swift */,
+				0ED232C5258B6F1300364DCB /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +297,10 @@
 				0ED232AD258ACAB400364DCB /* WebVC.swift in Sources */,
 				0ED2326E258AADCD00364DCB /* AppDelegate.swift in Sources */,
 				0ED23270258AADCD00364DCB /* SceneDelegate.swift in Sources */,
+				0ED232B2258B227300364DCB /* CollectionViewController.swift in Sources */,
+				0ED232BE258B6EDB00364DCB /* UIView +swift.swift in Sources */,
+				0ED232B7258B249100364DCB /* Cell.swift in Sources */,
+				0ED232C6258B6F1300364DCB /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
