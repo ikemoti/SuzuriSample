@@ -15,10 +15,15 @@ final class CollectionViewController: UIViewController {
         super.viewDidLoad()
         
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: 100, height: 100)
+        let margin: CGFloat = 5
+        flowLayout.itemSize = CGSize(width: 150, height: 250)
+        flowLayout.minimumInteritemSpacing = margin
+        flowLayout.minimumLineSpacing = margin  
         let collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
         collectionView.dataSource = self
         collectionView.register(Cell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.backgroundColor = .white
+        
         self.view.addSubviews(collectionView).activateAutoLayout()
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -39,7 +44,6 @@ extension CollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = .red
         return cell
     }
 }
