@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AlamofireImage
 
 final class Cell: UICollectionViewCell {
     private let imageView: UIImageView = .init()
@@ -55,14 +56,8 @@ final class Cell: UICollectionViewCell {
         titleLabel.text = product.title
         subTitleLabel.text = product.item.humanizeName
         priceLabel.text = "\(String(product.material.price))円"
-        imageView.image = UIImage(named: "nasu")!
+        imageView.af.setImage(withURL: product.sampleImageUrl)
         print(product.imageUrl)
-        do{
-            let imageData = try Data(contentsOf: product.sampleImageUrl)
-            imageView.image = UIImage(data: imageData)
-        } catch {
-            print("Error : Cat't get image")
-        }
     }
     private func setAttributes(){
         titleLabel.font = .boldSystemFont(ofSize: 20)

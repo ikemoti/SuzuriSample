@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Alamofire
 import RxSwift
-import SDWebImage
+import AlamofireImage
 
 final class CollectionViewController: UIViewController {
     private let disposeBag = DisposeBag()
@@ -25,7 +25,6 @@ final class CollectionViewController: UIViewController {
         flowLayout.minimumLineSpacing = margin  
         let collectionView = UICollectionView(frame: view.frame, collectionViewLayout: flowLayout)
         collectionView.dataSource = self
-        collectionView.prefetchDataSource = self
         collectionView.register(Cell.self, forCellWithReuseIdentifier: "Cell")
         collectionView.backgroundColor = .white
         self.view.addSubviews(collectionView).activateAutoLayout()
@@ -86,24 +85,9 @@ extension CollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
-        cell.addContent(product: list[indexPath.row])
+        let item = list[indexPath.row]
+        cell.addContent(product: item)
         return cell
-    }
-}
-extension CollectionViewController: UICollectionViewDataSourcePrefetching {
- 
-    // prefetch開始
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
- 
-//        // APIなどで取得した画像URLの配列を設定
-//        SDWebImagePrefetcher.shared().prefetchURLs(urls)
-    }
- 
-    // prefetchキャンセル
-    // スクロールの方向が変更された時に呼ばれる
-    func collectionView(_ collectionView: UICollectionView, cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
- 
-        SDWebImagePrefetcher.shared.cancelPrefetching()
     }
 }
 

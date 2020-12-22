@@ -35,6 +35,7 @@
 		0EDDBB4C2591C1FB00AF7389 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDBB4B2591C1FB00AF7389 /* DetailViewController.swift */; };
 		0EDDBB522591C32500AF7389 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDDBB512591C32500AF7389 /* AlamofireImage */; };
 		0EDDBB5B2591CF9200AF7389 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0EDDBB5A2591CF9200AF7389 /* SDWebImage */; };
+		0EDDBB602591D81E00AF7389 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDBB5F2591D81E00AF7389 /* ListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		0EDDBB3F2590C22100AF7389 /* Choices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choices.swift; sourceTree = "<group>"; };
 		0EDDBB442590C28D00AF7389 /* RequestChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestChoices.swift; sourceTree = "<group>"; };
 		0EDDBB4B2591C1FB00AF7389 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0EDDBB5F2591D81E00AF7389 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +221,6 @@
 		0EDDBAFE258D6B9100AF7389 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				0EDDBB392590BCB700AF7389 /* New Group */,
 				0EDDBAFF258D6B9A00AF7389 /* Request */,
 				0EDDBB342590BC3100AF7389 /* APIConstants.swift */,
 			);
@@ -258,6 +259,7 @@
 				0EDDBB14258D6DAB00AF7389 /* UIComponent */,
 				0ED232B1258B227300364DCB /* CollectionViewController.swift */,
 				0EDDBB2F2590BB3A00AF7389 /* ListViewModel.swift */,
+				0EDDBB5F2591D81E00AF7389 /* ListModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -268,13 +270,6 @@
 				0ED232B6258B249100364DCB /* Cell.swift */,
 			);
 			path = UIComponent;
-			sourceTree = "<group>";
-		};
-		0EDDBB392590BCB700AF7389 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		0EDDBB4A2591C1E900AF7389 /* Detail */ = {
@@ -441,6 +436,7 @@
 				0EDDBB4C2591C1FB00AF7389 /* DetailViewController.swift in Sources */,
 				0ED232B7258B249100364DCB /* Cell.swift in Sources */,
 				0EDDBB01258D6BC400AF7389 /* RequestProducts.swift in Sources */,
+				0EDDBB602591D81E00AF7389 /* ListModel.swift in Sources */,
 				0EDDBB452590C28D00AF7389 /* RequestChoices.swift in Sources */,
 				0EDDBB3B2590BCDE00AF7389 /* RequestSaleProducts.swift in Sources */,
 				0EDDBB352590BC3100AF7389 /* APIConstants.swift in Sources */,
