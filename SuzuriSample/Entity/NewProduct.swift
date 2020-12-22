@@ -60,36 +60,36 @@ public struct PrintPlace: Codable {
     public let itemVariantId: Int
 }
 public struct Meta: Codable {
-        public let hasNext: Bool
-    }
+    public let hasNext: Bool
+}
 public struct IconUrls: Codable {
-                public let blackSvg: String
-                public let whiteSvg: String
-                public let blackPng: String
-                public let whitePng: String
-            }
+    public let blackSvg: String
+    public let whiteSvg: String
+    public let blackPng: String
+    public let whitePng: String
+}
 
 public struct PrintPlaceDisplayNames: Codable {
-                public let front: String
-                public let back: String
-            }
+    public let front: String
+    public let back: String
+}
 public struct PrintPlaceForExtraAngles: Codable {
-                public struct TShirt: Codable {
-                    public let frontWearingMens: String
-                    public let frontWearingLadies: String
-                    private enum CodingKeys: String, CodingKey {
-                        case frontWearingMens = "front-wearing-mens"
-                        case frontWearingLadies = "front-wearing-ladies"
-                    }
-                }
-                public let tShirt: TShirt
-                private enum CodingKeys: String, CodingKey {
-                    case tShirt = "t-shirt"
-                }
-            }
+    public struct TShirt: Codable {
+        public let frontWearingMens: String
+        public let frontWearingLadies: String
+        private enum CodingKeys: String, CodingKey {
+            case frontWearingMens = "front-wearing-mens"
+            case frontWearingLadies = "front-wearing-ladies"
+        }
+    }
+    public let tShirt: TShirt
+    private enum CodingKeys: String, CodingKey {
+        case tShirt = "t-shirt"
+    }
+}
 public struct ProductImageUrlTemplates: Codable {
-                public let front: String
-            }
+    public let front: String?
+}
 
 public struct Item: Codable {
     public let id: Int
@@ -104,9 +104,7 @@ public struct Item: Codable {
     public let iconUrls: IconUrls
     public let isMultiPrintable: Bool
     public let printPlaceDisplayNames: PrintPlaceDisplayNames
-    
     public let printPlaceForExtraAngles: PrintPlaceForExtraAngles
     public let imageDescriptions: [String]
-    
     public let productImageUrlTemplates: ProductImageUrlTemplates
 }

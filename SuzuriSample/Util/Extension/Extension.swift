@@ -157,4 +157,29 @@ public extension Array where Element: UIView {
         return self
     }
 }
+extension JSONDecoder {
+    convenience init(type: JSONDecoder.KeyDecodingStrategy) {
+        self.init()
+        self.keyDecodingStrategy = type
+    }
 
+}
+extension CGFloat {
+   static func getViewWidth() -> CGFloat {
+        return UIScreen.main.bounds.size.width
+    }
+}
+
+extension UIImage {
+    public convenience init(url: String) {
+        let url = URL(string: url)
+        do {
+            let data = try Data(contentsOf: url!)
+            self.init(data: data)!
+            return
+        } catch let err {
+            print("Error : \(err.localizedDescription)")
+        }
+        self.init()
+    }
+}

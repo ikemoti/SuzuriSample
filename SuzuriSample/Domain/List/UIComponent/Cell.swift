@@ -25,8 +25,7 @@ final class Cell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setUI()
-        //Todo: 後で生成時に追加に修正, forceUnlap
-        addContent(title: "タイトル", subTitle: "サブタイトル", price: "値段", image: UIImage(named: "nasu")!)
+        setAttributes()
     }
     
     required init?(coder: NSCoder) {
@@ -48,14 +47,30 @@ final class Cell: UICollectionViewCell {
             stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            stackView.heightAnchor.constraint(equalToConstant: 50)
+            stackView.heightAnchor.constraint(equalToConstant: 70)
         ])
     }
     
-    func addContent(title: String, subTitle: String, price: String, image: UIImage){
-        titleLabel.text = title
-        subTitleLabel.text = subTitle
-        priceLabel.text = price
-        imageView.image = image
+    func addContent(product: Product){
+        titleLabel.text = product.title
+        subTitleLabel.text = product.item.humanizeName
+        priceLabel.text = "\(String(product.material.price))円"
+        imageView.image = UIImage(named: "nasu")!
+        print(product.imageUrl)
+        do{
+            let imageData = try Data(contentsOf: product.sampleImageUrl)
+            imageView.image = UIImage(data: imageData)
+        } catch {
+            print("Error : Cat't get image")
+        }
+    }
+    private func setAttributes(){
+        titleLabel.font = .boldSystemFont(ofSize: 20)
+        subTitleLabel.font = .boldSystemFont(ofSize: 20)
+        priceLabel.font = .systemFont(ofSize: 20)
+        subTitleLabel.textColor = .gray
+        titleLabel.textAlignment = .left
+        subTitleLabel.textAlignment = .left
+        priceLabel.textAlignment = .left
     }
 }

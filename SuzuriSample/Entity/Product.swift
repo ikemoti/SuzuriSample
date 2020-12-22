@@ -7,12 +7,11 @@
 
 import Foundation
 
-public struct Test: Codable {
+public struct ProductsResponse: Codable {
     public let products: [Product]
     public let meta: Meta
     
 }
-
 
 public struct Product: Codable {
     public let id: Int
