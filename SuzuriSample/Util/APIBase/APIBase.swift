@@ -63,8 +63,6 @@ enum APIResult {
 }
 
 struct APICliant {
-
-    // MARK: Private Static Variables
     private static let successRange = 200..<400
     private static let contentType = ["application/json"]
     static func call<T, V>(_ request: T, _ disposeBag: DisposeBag, onSuccess: @escaping (V) -> Void, onError: @escaping (Error) -> Void)

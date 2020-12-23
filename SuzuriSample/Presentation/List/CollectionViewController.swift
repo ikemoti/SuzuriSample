@@ -17,26 +17,30 @@ final class CollectionViewController: UIViewController {
     lazy var list: [Product] = []
     private var flowLayout = UICollectionViewFlowLayout()
     private let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: .init())
+    private let textField: UITextField = .init()
+    private let searchButton: UIButton = .init()
+    private let bottomView: UIView = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        
         setCollectionView()
         getProduct() { [weak self ] data in
             guard let self = self else { return }
             self.list = data.products
             self.collectionView.reloadData()
-            
         }
+        setUI()
+        
     }
     
     private func setUI(){
-        self.view.addSubviews(collectionView,floatingButton).activateAutoLayout()
+        self.view.addSubviews(collectionView,floatingButton,bottomView).activateAutoLayout()
+        bottomView.addSubviews(textField, searchButton).activateAutoLayout()
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -5),
             collectionView.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 5),
-            collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -5)
         ])
         NSLayoutConstraint.activate([
             floatingButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
@@ -45,6 +49,30 @@ final class CollectionViewController: UIViewController {
             floatingButton.heightAnchor.constraint(equalToConstant: 40)
         ])
         floatingButton.backgroundColor = .red
+        searchButton.backgroundColor = .blue
+        bottomView.backgroundColor = .green
+        textField.backgroundColor = .gray
+        
+        NSLayoutConstraint.activate([
+            bottomView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            bottomView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            bottomView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            bottomView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            bottomView.heightAnchor.constraint(equalToConstant: 80),
+        ])
+        NSLayoutConstraint.activate([
+            textField.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
+            textField.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10),
+            textField.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        NSLayoutConstraint.activate([
+            searchButton.leadingAnchor.constraint(equalTo: textField.trailingAnchor, constant: 10),
+            searchButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            searchButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10),
+            searchButton.heightAnchor.constraint(equalToConstant: 40),
+            searchButton.widthAnchor.constraint(equalToConstant: 40)
+        ])
+        
     }
     
     private func setCollectionView(){
@@ -115,7 +143,6 @@ final class CollectionViewController: UIViewController {
             nextVC.product = sender as! Product
         }
     }
-    
 }
 
 extension CollectionViewController: UICollectionViewDelegate {
