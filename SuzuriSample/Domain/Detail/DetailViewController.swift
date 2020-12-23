@@ -7,13 +7,13 @@
 
 import UIKit
 
-enum CellClass {
-    case product
-    case delivery
-    case user
+enum CellClass: String {
+    case product = "product"
+    case delivery = "delivery"
+    case user = "user"
 }
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     var product: Product?
     private let imageView: UIImageView = .init()
     private let titlelabel: UILabel = .init()
@@ -63,6 +63,20 @@ extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "product") as! ProductCell
         cell.addContents(product: product!)
+        switch section[indexPath.section] {
+            case .product:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "product") as! ProductCell
+                cell.addContents(product: product!)
+                return cell
+            case .delivery:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "description") as! DescriptionCell
+                return cell
+            case .user:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "user") as! UserCell
+                cell.addContents(product: product!)
+                return cell
+        }
+        
         return cell
     }
    

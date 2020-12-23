@@ -12,6 +12,7 @@ import RxSwift
 import AlamofireImage
 
 final class CollectionViewController: UIViewController {
+    private let floatingButton: UIButton = .init()
     private let disposeBag = DisposeBag()
     lazy var list: [Product] = []
     private var flowLayout = UICollectionViewFlowLayout()
@@ -30,13 +31,20 @@ final class CollectionViewController: UIViewController {
     }
     
     private func setUI(){
-        self.view.addSubviews(collectionView).activateAutoLayout()
+        self.view.addSubviews(collectionView,floatingButton).activateAutoLayout()
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -5),
             collectionView.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 5),
             collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: -5)
         ])
+        NSLayoutConstraint.activate([
+            floatingButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            floatingButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            floatingButton.widthAnchor.constraint(equalToConstant: 40),
+            floatingButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        floatingButton.backgroundColor = .red
     }
     
     private func setCollectionView(){
@@ -47,11 +55,33 @@ final class CollectionViewController: UIViewController {
         flowLayout.itemSize = CGSize(width: itemWidth, height: 250)
         flowLayout.minimumInteritemSpacing = margin
         flowLayout.minimumLineSpacing = margin
-       
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(Cell.self, forCellWithReuseIdentifier: "Cell")
         collectionView.backgroundColor = .white
+        
+    }
+    
+    var startingFrame : CGRect!
+    var endingFrame : CGRect!
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) && self.floatingButton.isHidden {
+            self.floatingButton.isHidden = false
+            self.floatingButton.frame = startingFrame
+            UIView.animate(withDuration: 1.0) {
+                self.floatingButton.frame = self.endingFrame
+            }
+        }
+    }
+    func configureSizes() {
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
+        startingFrame = CGRect(x: 0, y: screenHeight+100, width: screenWidth, height: 100)
+        endingFrame = CGRect(x: 0, y: screenHeight-100, width: screenWidth, height: 100)
         
     }
     private func getProduct(completion: @escaping (ProductsResponse) -> (Void)){
