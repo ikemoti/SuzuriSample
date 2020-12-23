@@ -11,6 +11,8 @@
 		0E469CF02593761D00D28227 /* DismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E469CEF2593761D00D28227 /* DismissAnimation.swift */; };
 		0E469CF52593765A00D28227 /* OverCurrenttransision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E469CF42593765A00D28227 /* OverCurrenttransision.swift */; };
 		0E469CFA2593769300D28227 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E469CF92593769300D28227 /* test.swift */; };
+		0E469D032594074F00D28227 /* SemiModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E469D022594074F00D28227 /* SemiModalViewController.swift */; };
+		0E469D08259408FB00D28227 /* SemiModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E469D07259408FB00D28227 /* SemiModalViewController.storyboard */; };
 		0ED2326E258AADCD00364DCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2326D258AADCD00364DCB /* AppDelegate.swift */; };
 		0ED23270258AADCD00364DCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2326F258AADCD00364DCB /* SceneDelegate.swift */; };
 		0ED23275258AADCD00364DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED23273258AADCD00364DCB /* Main.storyboard */; };
@@ -20,7 +22,7 @@
 		0ED23290258AADCF00364DCB /* SuzuriSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2328F258AADCF00364DCB /* SuzuriSampleUITests.swift */; };
 		0ED232A2258AAE8000364DCB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED232A1258AAE8000364DCB /* Alamofire */; };
 		0ED232A8258ACA8C00364DCB /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED232A7258ACA8C00364DCB /* OAuthSwift */; };
-		0ED232B2258B227300364DCB /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232B1258B227300364DCB /* CollectionViewController.swift */; };
+		0ED232B2258B227300364DCB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232B1258B227300364DCB /* ListViewController.swift */; };
 		0ED232B7258B249100364DCB /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232B6258B249100364DCB /* Cell.swift */; };
 		0ED232BE258B6EDB00364DCB /* UIView +swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232BD258B6EDB00364DCB /* UIView +swift.swift */; };
 		0ED232C6258B6F1300364DCB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED232C5258B6F1300364DCB /* Extension.swift */; };
@@ -68,6 +70,8 @@
 		0E469CEF2593761D00D28227 /* DismissAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimation.swift; sourceTree = "<group>"; };
 		0E469CF42593765A00D28227 /* OverCurrenttransision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverCurrenttransision.swift; sourceTree = "<group>"; };
 		0E469CF92593769300D28227 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		0E469D022594074F00D28227 /* SemiModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalViewController.swift; sourceTree = "<group>"; };
+		0E469D07259408FB00D28227 /* SemiModalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SemiModalViewController.storyboard; sourceTree = "<group>"; };
 		0ED2326A258AADCD00364DCB /* SuzuriSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuzuriSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED2326D258AADCD00364DCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ED2326F258AADCD00364DCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +85,7 @@
 		0ED2328B258AADCF00364DCB /* SuzuriSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuzuriSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED2328F258AADCF00364DCB /* SuzuriSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuzuriSampleUITests.swift; sourceTree = "<group>"; };
 		0ED23291258AADCF00364DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0ED232B1258B227300364DCB /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		0ED232B1258B227300364DCB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0ED232B6258B249100364DCB /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		0ED232BD258B6EDB00364DCB /* UIView +swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView +swift.swift"; sourceTree = "<group>"; };
 		0ED232C5258B6F1300364DCB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				0ED23273258AADCD00364DCB /* Main.storyboard */,
 				0EDDBB4A2591C1E900AF7389 /* Detail */,
 				0EDDBB13258D6D9800AF7389 /* List */,
+				0E469D07259408FB00D28227 /* SemiModalViewController.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -294,7 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDDBB14258D6DAB00AF7389 /* UIComponent */,
-				0ED232B1258B227300364DCB /* CollectionViewController.swift */,
+				0ED232B1258B227300364DCB /* ListViewController.swift */,
 				0EDDBB2F2590BB3A00AF7389 /* ListPresentar.swift */,
 				0EDDBB5F2591D81E00AF7389 /* ListModel.swift */,
 			);
@@ -305,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				0ED232B6258B249100364DCB /* Cell.swift */,
+				0E469D022594074F00D28227 /* SemiModalViewController.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 			files = (
 				0ED2327A258AADCF00364DCB /* LaunchScreen.storyboard in Resources */,
 				0ED23277258AADCF00364DCB /* Assets.xcassets in Resources */,
+				0E469D08259408FB00D28227 /* SemiModalViewController.storyboard in Resources */,
 				0ED23275258AADCD00364DCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,9 +484,10 @@
 				0EDDBAC1258CBB2A00AF7389 /* Product.swift in Sources */,
 				0ED2326E258AADCD00364DCB /* AppDelegate.swift in Sources */,
 				0ED23270258AADCD00364DCB /* SceneDelegate.swift in Sources */,
-				0ED232B2258B227300364DCB /* CollectionViewController.swift in Sources */,
+				0ED232B2258B227300364DCB /* ListViewController.swift in Sources */,
 				0EDDBB402590C22100AF7389 /* Choices.swift in Sources */,
 				0ED232BE258B6EDB00364DCB /* UIView +swift.swift in Sources */,
+				0E469D032594074F00D28227 /* SemiModalViewController.swift in Sources */,
 				0EDDBACD258CF7A800AF7389 /* APIBase.swift in Sources */,
 				0E469CF52593765A00D28227 /* OverCurrenttransision.swift in Sources */,
 				0EDDBB712592D7B400AF7389 /* DescriptionCell.swift in Sources */,
