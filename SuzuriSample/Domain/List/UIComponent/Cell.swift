@@ -57,7 +57,6 @@ final class Cell: UICollectionViewCell {
         subTitleLabel.text = product.item.humanizeName
         priceLabel.text = "\(String(product.material.price))円"
         imageView.af.setImage(withURL: product.sampleImageUrl)
-        print(product.imageUrl)
     }
     private func setAttributes(){
         titleLabel.font = .boldSystemFont(ofSize: 20)
