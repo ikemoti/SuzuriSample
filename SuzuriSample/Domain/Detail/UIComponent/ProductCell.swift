@@ -48,7 +48,6 @@ final class ProductCell: UITableViewCell {
         ])
     }
     func addContents(product: Product){
-        print(product)
         productImage.af.setImage(withURL: product.sampleImageUrl)
         titlelabel.text = product.title
         titlelabel.font = .boldSystemFont(ofSize: 20)
@@ -57,6 +56,10 @@ final class ProductCell: UITableViewCell {
         descriptionTitle.text = "このアイテムについて"
         descriptionlabel.text = product.material.description
         descriptionlabel.numberOfLines = 0
+        
+        if product.material.description == nil {
+            descriptionTitle.isHidden = true
+        }
     }
 
 }

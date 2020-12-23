@@ -39,6 +39,7 @@
 		0EDDBB6C2592D77800AF7389 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDBB6B2592D77800AF7389 /* ProductCell.swift */; };
 		0EDDBB712592D7B400AF7389 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDBB702592D7B400AF7389 /* DescriptionCell.swift */; };
 		0EDDBB762592D7C400AF7389 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDBB752592D7C400AF7389 /* UserCell.swift */; };
+		0EDDBB812593452200AF7389 /* EnhancedCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDDBB802593452200AF7389 /* EnhancedCircleImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		0EDDBB6B2592D77800AF7389 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0EDDBB702592D7B400AF7389 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		0EDDBB752592D7C400AF7389 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		0EDDBB802593452200AF7389 /* EnhancedCircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedCircleImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +155,6 @@
 				0EDDBB09258D6D6000AF7389 /* Domain */,
 				0ED2326D258AADCD00364DCB /* AppDelegate.swift */,
 				0ED2326F258AADCD00364DCB /* SceneDelegate.swift */,
-				0ED23273258AADCD00364DCB /* Main.storyboard */,
 				0ED23276258AADCF00364DCB /* Assets.xcassets */,
 				0ED23278258AADCF00364DCB /* LaunchScreen.storyboard */,
 				0ED2327B258AADCF00364DCB /* Info.plist */,
@@ -184,6 +185,7 @@
 			children = (
 				0ED232BD258B6EDB00364DCB /* UIView +swift.swift */,
 				0ED232C5258B6F1300364DCB /* Extension.swift */,
+				0EDDBB802593452200AF7389 /* EnhancedCircleImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -192,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				0EDDBAC0258CBB2A00AF7389 /* Product.swift */,
-				0EDDBAC5258CEE2100AF7389 /* NewProduct.swift */,
 				0EDDBB3F2590C22100AF7389 /* Choices.swift */,
+				0EDDBAC5258CEE2100AF7389 /* NewProduct.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -253,6 +255,7 @@
 		0EDDBB09258D6D6000AF7389 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0ED23273258AADCD00364DCB /* Main.storyboard */,
 				0EDDBB4A2591C1E900AF7389 /* Detail */,
 				0EDDBB13258D6D9800AF7389 /* List */,
 			);
@@ -459,6 +462,7 @@
 				0EDDBB452590C28D00AF7389 /* RequestChoices.swift in Sources */,
 				0EDDBB3B2590BCDE00AF7389 /* RequestSaleProducts.swift in Sources */,
 				0EDDBB352590BC3100AF7389 /* APIConstants.swift in Sources */,
+				0EDDBB812593452200AF7389 /* EnhancedCircleImageView.swift in Sources */,
 				0EDDBAC6258CEE2100AF7389 /* NewProduct.swift in Sources */,
 				0EDDBB6C2592D77800AF7389 /* ProductCell.swift in Sources */,
 				0ED232C6258B6F1300364DCB /* Extension.swift in Sources */,
