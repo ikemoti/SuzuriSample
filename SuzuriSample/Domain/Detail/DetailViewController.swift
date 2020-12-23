@@ -32,13 +32,19 @@ class DetailViewController: UIViewController {
         tableView.register(ProductCell.self, forCellReuseIdentifier: "product")
         tableView.register(DescriptionCell.self, forCellReuseIdentifier: "description")
         tableView.register(UserCell.self, forCellReuseIdentifier: "user")
+        tableView.backgroundColor = UIColor(red: 239 / 255, green: 239 / 255, blue: 244 / 255, alpha: 1)
     }
 }
 
 extension DetailViewController{
     private func setUI(){
         self.view.addSubviews(tableView).activateAutoLayout()
-        
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: self.view.topAnchor)
+        ])
     }
 }
 
@@ -55,8 +61,18 @@ extension DetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "product") as! ProductCell
+        cell.addContents(product: product!)
+        return cell
     }
-    
-    
+   
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 30
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let marginView = UIView()
+        marginView.backgroundColor = .clear
+        return marginView
+    }
 }
