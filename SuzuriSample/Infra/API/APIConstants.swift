@@ -19,9 +19,6 @@ enum APIConstants {
             case .choices: return "/api/v1/choices"
         }
     }
-
-   
-    // MARK: Public Static Variables
     public static var baseURL = "https://suzuri.jp"
 
     public static var header: HTTPHeaders? {

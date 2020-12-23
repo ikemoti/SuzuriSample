@@ -18,10 +18,28 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="UvW-T3-yJZ" kind="presentation" identifier="toDetail" id="2gb-zC-xWA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="95"/>
+            <point key="canvasLocation" x="-168" y="110"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Tp-1L-QQc">
+            <objects>
+                <viewController id="UvW-T3-yJZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FXv-C6-bLz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tCe-xk-14l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fw1-AW-axi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="110"/>
         </scene>
     </scenes>
     <resources>

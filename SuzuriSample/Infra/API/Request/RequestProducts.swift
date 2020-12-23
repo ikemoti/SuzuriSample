@@ -10,19 +10,19 @@ import Alamofire
 
 enum RequestProducts: BaseRequestProtocol {
     typealias ResponseType = ProductsResponse
-
+    
     case get
-
+    
     var method: HTTPMethod {
         switch self {
-        case .get: return .get
+            case .get: return .get
         }
     }
-
+    
     var path: String {
         return APIConstants.xxx.path
     }
-
+    
     var parameters: Parameters? {
         return nil
     }

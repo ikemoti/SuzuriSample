@@ -35,12 +35,6 @@ final class CollectionViewController: UIViewController {
             collectionView.reloadData()
            
         }
-//        getSaleProduct(){ [weak self ] data in
-//            print("終わったよ")
-//            guard let self = self else { return }
-//            self.list = data.products
-//            collectionView.reloadData()
-//        }
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -5),
@@ -73,10 +67,20 @@ final class CollectionViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+                   let nextVC = segue.destination as! DetailViewController
+                   nextVC.product = sender as! Product
+               }
+    }
     
 }
 
-extension CollectionViewController: UICollectionViewDelegate {}
+extension CollectionViewController: UICollectionViewDelegate {
+       func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.performSegue(withIdentifier: "toDetail", sender: list[indexPath.row])
+       }
+}
 
 extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

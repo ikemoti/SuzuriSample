@@ -8,7 +8,3 @@
 import Foundation
 import UIKit
 
-class ListProtocol {
-    func getProducts()
-    
-}
